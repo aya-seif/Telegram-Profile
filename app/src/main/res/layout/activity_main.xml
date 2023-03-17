@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="#5A8EBD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_the_chance"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_icon"
+        app:shapeAppearance="@style/circleImageView"
+        app:srcCompat="@drawable/img_thechance" />
+
+
+    <TextView
+        android:id="@+id/tv_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="The chance"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subscribers"
+        app:layout_constraintStart_toEndOf="@+id/img_the_chance"
+        app:layout_constraintTop_toTopOf="@+id/img_the_chance" />
+
+    <TextView
+        android:id="@+id/tv_subscribers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="812 subscribers"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_the_chance"
+        app:layout_constraintStart_toStartOf="@+id/tv_profile_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Info"
+        android:textColor="#4094D0"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_background" />
+
+    <TextView
+        android:id="@+id/tv_channel_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="t.me/theChance101"
+        android:textColor="#202020"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+
+
+    <TextView
+        android:id="@+id/tv_invite_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Invite Link"
+        android:textColor="#83868B"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_channel_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_channel_id" />
+
+
+    <ImageView
+        android:id="@+id/icon_qrcode"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="22dp"
+        android:src="@drawable/baseline_qr_code_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_invite_link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_channel_id" />
+
+    <View
+        android:id="@+id/divider_thin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="14dp"
+        android:background="#E9EBEA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_invite_link" />
+
+
+    <TextView
+        android:id="@+id/tv_notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto"
+        android:text="Notifications"
+        android:textColor="#202020"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_thin" />
+
+
+    <TextView
+        android:id="@+id/tv_notification_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="On"
+        android:textColor="#83868B"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_notifications"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notifications" />
+
+
+    <Switch
+        android:id="@+id/btn_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:checked="true"
+        android:theme="@style/Theme.MyTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_notification_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_notifications" />
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:background="#E8EAEB"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_switch"
+        app:layout_constraintEnd_toStartOf="@+id/btn_switch"
+        app:layout_constraintTop_toTopOf="@+id/btn_switch" />
+
+
+    <View
+        android:id="@+id/divider_thick"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        android:background="#F0F0F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notification_status" />
+
+
+    <TextView
+        android:id="@+id/tv_media"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Media"
+        android:textAlignment="center"
+        android:textColor="#3B94D0"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_files"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_thick" />
+
+    <TextView
+        android:id="@+id/tv_files"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Files"
+        android:textAlignment="center"
+        android:textColor="#9B9B9B"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_media"
+        app:layout_constraintEnd_toStartOf="@+id/tv_links"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_media"
+        app:layout_constraintTop_toTopOf="@+id/tv_media" />
+
+    <TextView
+        android:id="@+id/tv_links"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Links"
+        android:textAlignment="center"
+        android:textColor="#9B9B9B"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_files"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_files"
+        app:layout_constraintTop_toTopOf="@+id/tv_files" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
