@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:maxVelocity="2000"
+            motion:onTouchUp="autoComplete"
+            motion:touchRegionId="@id/touch_region" />
+
+        <TouchRegion
+            android:id="@+id/touch_region"
+            android:bottom="1000dp"
+            android:left="0dp"
+            android:right="1000dp"
+            android:shape="rectangle"
+            android:top="0dp" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/img_background"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img_the_chance"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:shapeAppearance="@style/RoundedShapeAppearanceSmall"
+            motion:layout_constraintBottom_toBottomOf="@+id/back_icon"
+            motion:layout_constraintStart_toEndOf="@+id/back_icon"
+            motion:layout_constraintTop_toTopOf="@+id/back_icon" />
+
+        <Constraint
+            android:id="@+id/tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_subscribers"
+            motion:layout_constraintStart_toEndOf="@+id/img_the_chance"
+            motion:layout_constraintTop_toTopOf="@+id/img_the_chance">
+
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customFloatValue="18" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_subscribers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/tv_profile_name"
+            motion:layout_constraintTop_toBottomOf="@+id/tv_profile_name">
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customFloatValue="12" />
+        </Constraint>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/animation_end">
+        <Constraint
+            android:id="@+id/img_background"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_info"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img_the_chance"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_thechance"
+            app:shapeAppearance="@style/RectangularShapeAppearance"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_info"
+            motion:layout_constraintEnd_toEndOf="@+id/img_background"
+            motion:layout_constraintStart_toStartOf="@+id/img_background"
+            motion:layout_constraintTop_toTopOf="@+id/img_background" />
+
+
+        <Constraint
+            android:id="@+id/tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_subscribers"
+            motion:layout_constraintStart_toStartOf="@+id/tv_subscribers">
+
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customFloatValue="24" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_subscribers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/img_the_chance"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="textSize"
+                motion:customFloatValue="12" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetEnd="@+id/animation_end"
+        motion:constraintSetStart="@id/start">
+        <OnSwipe
+            motion:dragDirection="dragDown"
+            motion:maxVelocity="2000"
+            motion:onTouchUp="autoComplete"
+            motion:touchRegionId="@id/touch_region_dragdown" />
+
+        <TouchRegion
+            android:id="@+id/touch_region_dragdown"
+            android:bottom="1000dp"
+            android:left="0dp"
+            android:right="1000dp"
+            android:shape="rectangle"
+            android:top="0dp" />
+
+
+    </Transition>
+
+</MotionScene>
