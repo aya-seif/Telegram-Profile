@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="category_text_style">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+
+    <style name="black_text_style">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/black_blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="grey_text_style">
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>
