@@ -21,20 +21,21 @@
             android:top="0dp" />
     </Transition>
 
-    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/img_background"
+            android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/img_the_chance"
+            android:id="@+id/img_profile"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/margin_20dp"
             app:shapeAppearance="@style/RoundedShapeAppearanceSmall"
             motion:layout_constraintBottom_toBottomOf="@+id/back_icon"
             motion:layout_constraintStart_toEndOf="@+id/back_icon"
@@ -44,10 +45,9 @@
             android:id="@+id/tv_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            motion:layout_constraintBottom_toTopOf="@+id/tv_subscribers"
-            motion:layout_constraintStart_toEndOf="@+id/img_the_chance"
-            motion:layout_constraintTop_toTopOf="@+id/img_the_chance">
+            android:layout_marginStart="@dimen/margin_12dp"
+            motion:layout_constraintStart_toEndOf="@+id/img_profile"
+            motion:layout_constraintTop_toTopOf="@+id/img_profile">
 
             <CustomAttribute
                 motion:attributeName="textSize"
@@ -59,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintStart_toStartOf="@+id/tv_profile_name"
+            motion:layout_constraintBottom_toBottomOf="@+id/img_profile"
             motion:layout_constraintTop_toBottomOf="@+id/tv_profile_name">
             <CustomAttribute
                 motion:attributeName="textSize"
@@ -70,7 +71,7 @@
 
     <ConstraintSet android:id="@+id/animation_end">
         <Constraint
-            android:id="@+id/img_background"
+            android:id="@+id/background"
             android:layout_width="0dp"
             android:layout_height="300dp"
             motion:layout_constraintBottom_toTopOf="@+id/tv_info"
@@ -78,43 +79,49 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/img_the_chance"
+            android:id="@+id/img_profile"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_thechance"
+            android:alpha="0.9"
+            android:scaleX="1.2"
+            android:src="@drawable/img_profile"
             app:shapeAppearance="@style/RectangularShapeAppearance"
-            motion:layout_constraintBottom_toTopOf="@+id/tv_info"
-            motion:layout_constraintEnd_toEndOf="@+id/img_background"
-            motion:layout_constraintStart_toStartOf="@+id/img_background"
-            motion:layout_constraintTop_toTopOf="@+id/img_background" />
+            motion:layout_constraintEnd_toEndOf="@+id/background"
+            motion:layout_constraintStart_toStartOf="@+id/background"
+            motion:layout_constraintTop_toTopOf="@+id/background">
+
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="0dp" />
+        </Constraint>
 
 
         <Constraint
             android:id="@+id/tv_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginStart="@dimen/margin_medium"
             motion:layout_constraintBottom_toTopOf="@+id/tv_subscribers"
-            motion:layout_constraintStart_toStartOf="@+id/tv_subscribers">
+            motion:layout_constraintStart_toStartOf="parent">
 
             <CustomAttribute
                 motion:attributeName="textSize"
-                motion:customFloatValue="24" />
+                motion:customFloatValue="20" />
         </Constraint>
 
         <Constraint
             android:id="@+id/tv_subscribers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="15dp"
-            motion:layout_constraintBottom_toBottomOf="@+id/img_the_chance"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/img_profile"
             motion:layout_constraintStart_toStartOf="parent">
             <CustomAttribute
                 motion:attributeName="textSize"
-                motion:customFloatValue="12" />
+                motion:customFloatValue="14" />
         </Constraint>
 
     </ConstraintSet>
