@@ -33,8 +33,8 @@
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
             android:id="@+id/img_profile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/margin_40dp"
+            android:layout_height="@dimen/margin_40dp"
             android:layout_marginStart="@dimen/margin_20dp"
             app:shapeAppearance="@style/RoundedShapeAppearanceSmall"
             motion:layout_constraintBottom_toBottomOf="@+id/back_icon"
@@ -72,8 +72,8 @@
     <ConstraintSet android:id="@+id/animation_end">
         <Constraint
             android:id="@+id/background"
-            android:layout_width="0dp"
-            android:layout_height="300dp"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_300dp"
             motion:layout_constraintBottom_toTopOf="@+id/tv_info"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -81,7 +81,7 @@
         <Constraint
             android:id="@+id/img_profile"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/margin_300dp"
             android:scaleType="centerCrop"
             android:alpha="0.9"
             android:scaleX="1.2"
@@ -93,7 +93,7 @@
 
             <CustomAttribute
                 motion:attributeName="radius"
-                motion:customDimension="0dp" />
+                motion:customDimension="@dimen/margin_0dp" />
         </Constraint>
 
 
@@ -101,7 +101,7 @@
             android:id="@+id/tv_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
             android:layout_marginStart="@dimen/margin_medium"
             motion:layout_constraintBottom_toTopOf="@+id/tv_subscribers"
             motion:layout_constraintStart_toStartOf="parent">
