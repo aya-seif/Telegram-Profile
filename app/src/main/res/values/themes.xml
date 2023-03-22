@@ -16,18 +16,22 @@
 
     <style name="RoundedShapeAppearance" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">15dp</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="RoundedShapeAppearanceSmall" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">2dp</item>
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
     </style>
 
     <style name="RectangularShapeAppearance">
         <item name="cornerSize">0dp</item>
     </style>
 
+    <style name="image_category_style">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
     <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
         <!-- colorPrimary is used for the default action bar background -->
         <item name="colorPrimary">#83868B</item>
